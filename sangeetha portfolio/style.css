@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sangeetha's Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for stickers/icons -->
+  <script src="https://kit.fontawesome.com/3c6b9b33f8.js" crossorigin="anonymous"></script>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    html, body {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    body {
+      background: #fff0f5;
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(90deg, #ff416c, #ff4b2b);
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+      z-index: 1000;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 25px;
+      font-weight: 600;
+      transition: 0.3s;
+      font-size: 1rem;
+    }
+
+    nav a:hover {
+      color: #ffe4e1;
+      transform: scale(1.1);
+    }
+
+    /* Section Styling */
+    section {
+      height: 100vh;
+      padding: 100px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Home */
+    #home {
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      color: white;
+      position: relative;
+    }
+
+    #home h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    #home button {
+      padding: 15px 30px;
+      background: #ff4b2b;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #home button:hover {
+      background: #ff1e56;
+      transform: scale(1.1);
+    }
+
+    /* About */
+    #about {
+      background: #ffe4e1;
+      color: #333;
+    }
+
+    #about h2 {
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+      color: #ff4b2b;
+    }
+
+    #about p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      max-width: 600px;
+    }
+
+    #about input {
+      margin-top: 15px;
+    }
+
+    #about img {
+      margin-top: 20px;
+      max-width: 200px;
+      border-radius: 50%;
+      border: 5px solid #ff4b2b;
+      display: none;
+    }
+
+    /* Projects */
+    #projects {
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      color: white;
+    }
+
+    #projects h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .project-container {
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .project-box {
+      background: #fff0f5;
+      color: #333;
+      border-radius: 20px;
+      padding: 25px;
+      width: 250px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .project-box:hover {
+      transform: translateY(-10px) scale(1.05);
+    }
+
+    .project-box h3 {
+      margin-bottom: 10px;
+      color: #ff4b2b;
+    }
+
+    /* Contact */
+    #contact {
+      background: #ffe4e1;
+    }
+
+    #contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ff4b2b;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 320px;
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    form input, form textarea {
+      padding: 12px;
+      border: 2px solid #ff4b2b;
+      border-radius: 10px;
+      outline: none;
+      resize: none;
+      font-size: 1rem;
+    }
+
+    form button {
+      padding: 12px;
+      background: #ff4b2b;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #ff1e56;
+    }
+
+    /* Footer */
+    footer {
+      padding: 15px;
+      background: linear-gradient(90deg, #ff416c, #ff4b2b);
+      color: white;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    /* Stickers / Icons */
+    .icon {
+      font-size: 50px;
+      margin: 20px 0;
+      color: #ff4b2b;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact Me</a>
+  </nav>
+
+  <!-- Home -->
+  <section id="home">
+    <i class="fas fa-laptop-code icon"></i>
+    <h1>Hello, I'm Sangeetha,<br>A passionate Data Science student</h1>
+    <button onclick="document.querySelector('#projects').scrollIntoView({behavior:'smooth'})">
+      View My Work
+    </button>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <i class="fas fa-user-graduate icon"></i>
+    <h2>About Me</h2>
+    <p>I'm a passionate Computer Science student with specialization in Data Science.</p>
+    <input type="file" accept="image/*" id="uploadImage">
+    <img id="profilePic" alt="Uploaded Picture">
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <i class="fas fa-project-diagram icon"></i>
+    <h2>My Projects</h2>
+    <div class="project-container">
+      <div class="project-box">
+        <h3>Project 1</h3>
+        <p>Simple HTML page</p>
+      </div>
+      <div class="project-box">
+        <h3>Project 2</h3>
+        <p>Simple CSS and HTML page</p>
+      </div>
+      <div class="project-box">
+        <h3>Project 3</h3>
+        <p>JavaScript program</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <i class="fas fa-envelope-open-text icon"></i>
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Sangeetha | Made with ❤️ using Red & Pink theme</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Image upload preview
+    document.getElementById("uploadImage").addEventListener("change", function(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const img = document.getElementById("profilePic");
+          img.src = e.target.result;
+          img.style.display = "block";
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
+</body>
+</html>
